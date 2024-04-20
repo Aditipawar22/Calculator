@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/jpg" href="https://atlas-content-cdn.pixelsquid.com/stock-images/icon-calculator-blue-AvYP02E-600.jpg">
+	<title>Calculator</title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+		.container{
+			height: 100vh;
+			width: 100%;
+			background-image: url(https://media.istockphoto.com/id/178895760/photo/an-abstract-blue-pattern-with-numbers.jpg?s=2048x2048&w=is&k=20&c=otPAHbXkfqe5wOpcGIY1ObQnWACyMctdBbXiNjK4KjM=);
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.parent_div{
+			height: 580px;
+			width: 375px;
+			background-color: white;
+			border-radius: 50px;
+			box-shadow: 0px 0px 40px black;
+			padding: 0px 20px;
+		}
+		.output{
+			height: 75px;
+			width: 90%;
+			font-size: 40px;
+			text-align: right;
+			margin-top: 20px;
+			padding: 0px 20px;
+		}
+		input{
+			height: 80px;
+			width: 80px;
+			margin: 5px;
+			border-radius: 35px;
+			background-color: grey;
+			border: none;
+			color: white;
+			font-size: 28px;
+			font-family: Arial Black;
+		}
+		input:hover{
+			cursor: pointer;
+		}
+		input[name="operator"],.org{
+			background-color: #0096FF;
+		}
+		.eql{
+			width: 170px;
+		}
+		.calci{
+			color: white;
+			-webkit-text-stroke: 4px #097969;
+			margin-right: 80px;
+			font-size: 100px;
+			font-family: "Orbitron", sans-serif;
+			font-weight: bolder;
+			
+		}
+		.tracking-in-contract {
+	-webkit-animation: tracking-in-contract 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-contract 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+@-webkit-keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+	<h1 class="calci tracking-in-contract">CALCULATOR</h1>
+		<div class="parent_div">
+		<form>
+			<div class="data">
+				<input type="text" name="op" class="output" disabled>
+			</div>
+
+			<div>
+				<input type="button" name="AC" value="AC" onclick="op.value=''" class="org">
+				<input type="button" name="C" value="C" onclick="op.value=op.value.slice(0,-1)" class="org">
+				<input type="button" name="operator" value="/" onclick="op.value +='/'">
+				<input type="button" name="operator" value="%" onclick="op.value +='%'">
+			</div>
+
+			<div>
+				<input type="button" name="num" value="9" onclick="op.value +='9'">
+				<input type="button" name="num" value="8" onclick="op.value +='8'">
+				<input type="button" name="num" value="7" onclick="op.value +='7'">
+				<input type="button" name="operator" value="*" onclick="op.value +='*'">
+			</div>
+
+			<div>
+				<input type="button" name="num" value="6" onclick="op.value +='6'">
+				<input type="button" name="num" value="5" onclick="op.value +='5'">
+				<input type="button" name="num" value="4" onclick="op.value +='4'">
+				<input type="button" name="operator" value="+" onclick="op.value +='+'">
+			</div>
+
+			<div>
+				<input type="button" name="num" value="3" onclick="op.value +='3'">
+				<input type="button" name="num" value="2" onclick="op.value +='2'">
+				<input type="button" name="num" value="1" onclick="op.value +='1'">
+				<input type="button" name="operator" value="-" onclick="op.value +='-'">
+			</div>
+
+			<div>
+				<input type="button" name="num" value="0" onclick="op.value +='0'">
+				<input type="button" name="operator" value="." onclick="op.value +='.'">
+				<input type="button" name="operator" value="=" onclick="op.value=eval(op.value)" class="eql">
+			</div>
+		</form>
+	</div>
+	</div>
+
+</body>
+</html>
